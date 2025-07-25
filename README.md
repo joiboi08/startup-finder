@@ -1,5 +1,4 @@
-# This is an app to create and discover startups! 
-Discover people and their vision or let others know yours! 
+# Welcome to SmallWorld! 
+Discover people and their vision or let others know yours! Make it a small world and find your next investor or product. 
 
 
-### Starting with Auth
