@@ -9,32 +9,33 @@ const Navbar = async () => {
   const session = await auth();
 
   return (
-    <header className='font-work-sans bg-white-500 shadow-sm px-5 py-3'>
+    <header className='font-work-sans bg-black/20 shadow-sm px-5 py-3'>
         <nav className='flex justify-between items-center'>
             <Link href="/">
-                <Image src="/earth-logo.png" alt="logo" width={60} height={40} />
+                <span className='flex items-center text-black'><Image src="/earth-logo.png" alt="logo" width={50} height={40} className='pr-5'/>
+                Small World</span>
             </Link>
 
             <div className="flex items-center gap-5 text-gray-700">
-              
+
               {session && session?.user ? (
                 <>
-                  <Link href="startup/create">
+                  <Link href="startup/create" className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-gray-200 transition-colors'>
                     Create
                   </Link>
 
                   <form action={async () => {
                     'use server';
                     // This is an ASYNC server action, so we can use the signOut function directly
-                    await signOut(); 
+                    await signOut( { redirectTo: "/" } )
                   }}>
-                    <button type='submit'>
+                    <button type='submit' className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-gray-200 transition-colors'>
                       Logout
                     </button>
                   </form>
 
-                  <Link href= {`/user/${session?.user?.id}`}>
-                    <span>{session?.user?.id}</span>
+                  <Link href= {`/user/${session?.id}`} className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-gray-200 transition-colors'>
+                    <span>!{session?.user?.id}</span>
                   </Link>
 
 
@@ -62,6 +63,7 @@ const Navbar = async () => {
 
 export default Navbar
 
+  
 
 
 /**
