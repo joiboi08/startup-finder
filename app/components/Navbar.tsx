@@ -13,11 +13,11 @@ const Navbar = async () => {
     <header className='font-work-sans bg-black/80 shadow-sm px-5 py-3'>
         <nav className='flex justify-between items-center'>
             <Link href="/">
-                <span className='flex items-center text-white/50'><Image src="/earth-logo.png" alt="logo" width={50} height={40} className='pr-5'/>
+                <span className='flex items-center text-14-normal'><Image src="/earth-logo.png" alt="logo" width={50} height={40} className='pr-5'/>
                 Small World</span>
             </Link>
 
-            <div className="flex items-center gap-5 text-white/50">
+            <div className="flex items-center gap-5 text-14-normal">
 
               {session && session.user ? (
                 <> 
