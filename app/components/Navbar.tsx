@@ -10,7 +10,7 @@ const Navbar = async () => {
   const session = await auth();
 //  console.log("session details: ", session);
   return (
-    <header className='font-work-sans bg-black/80 shadow-sm px-5 py-3'>
+    <header className='font-work-sans bg-white shadow-sm px-5 py-3'>
         <nav className='flex justify-between items-center'>
             <Link href="/">
                 <span className='flex items-center text-14-normal'><Image src="/earth-logo.png" alt="logo" width={50} height={40} className='pr-5'/>
