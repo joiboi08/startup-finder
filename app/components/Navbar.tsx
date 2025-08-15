@@ -10,18 +10,18 @@ const Navbar = async () => {
   const session = await auth();
 //  console.log("session details: ", session);
   return (
-    <header className='font-work-sans bg-white shadow-sm px-5 py-3'>
+    <header className='font-work-sans bg-charcoal shadow-sm px-5 py-3'>
         <nav className='flex justify-between items-center'>
             <Link href="/">
-                <span className='flex items-center text-14-normal'><Image src="/earth-logo.png" alt="logo" width={50} height={40} className='pr-5'/>
+                <span className='flex items-center text-14-normal !text-cloud'><Image src="/earth-logo.png" alt="logo" width={50} height={40} className='pr-5'/>
                 Small World</span>
             </Link>
 
-            <div className="flex items-center gap-5 text-14-normal">
+            <div className="flex items-center gap-5 text-14-normal !text-cloud">
 
               {session && session.user ? (
                 <> 
-                  <Link href="startup/create" className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-gray-200 hover:text-black transition-colors'>
+                  <Link href="startup/create" className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-secondary hover:text-cloud transition-colors'>
                     Create
                   </Link>
 
@@ -30,10 +30,10 @@ const Navbar = async () => {
 
                     await signOut( {redirectTo: "/"}); 
                   }}>
-                    <button type='submit' className='px-3 py-2 rounded-md hover:bg-gray-200 hover:text-black transition-colors'>Logout</button>
+                    <button type='submit' className='px-3 py-2 rounded-md hover:bg-secondary hover:text-cloud transition-colors'>Logout</button>
                   </form>
 
-                  <Link href= {`/user/@${session?.user.name}`} className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-gray-200 hover:text-black transition-colors'>
+                  <Link href= {`/user/@${session?.user.name}`} className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-secondary hover:text-cloud transition-colors'>
                   
                     <span>{session?.user?.name}</span>
                   </Link>
@@ -48,7 +48,7 @@ const Navbar = async () => {
 
                   await signIn('github')
                   }} >
-                  <button type="submit" className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-gray-200 hover:text-black transition-colors'>
+                  <button type="submit" className='flex items-center gap-2 bg-black-800 px-3 py-2 rounded-md hover:bg-secondary hover:text-cloud transition-colors'>
                     Login
                   </button>
 

@@ -1,5 +1,6 @@
 "use client";   // isolated client func here so its parent can still be server side rendered
 
+import { X } from 'lucide-react';
 import Link from 'next/link';
 import React from 'react'
 
@@ -16,7 +17,7 @@ const SearchFormResetBtn = () => {
   return (
     <button type="reset" onClick={reset}>
         <Link href="/" className='search-btn text-white'>
-            x
+            <X className='size-5' />
         </Link>
     </button>
   )
