@@ -206,7 +206,7 @@
     }
 
     .search-btn {
-        @apply size-[50px] rounded-full bg-black flex justify-center items-center ;
+        @apply size-[50px] rounded-full bg-secondary flex justify-center items-center ;
     }
 
     /* startupcard */
